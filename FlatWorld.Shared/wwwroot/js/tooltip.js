@@ -48,7 +48,7 @@
             // Add ARIA attributes
             const tooltip = wrapper.querySelector('.tooltip');
             if (tooltip) {
-                const tooltipId = 'tooltip-' + Math.random().toString(36).substr(2, 9);
+                const tooltipId = 'tooltip-' + Math.random().toString(36).substring(2, 11);
                 tooltip.setAttribute('id', tooltipId);
                 tooltip.setAttribute('role', 'tooltip');
                 wrapper.setAttribute('aria-describedby', tooltipId);
