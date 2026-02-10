@@ -76,6 +76,8 @@ FlatWorldNew/
 
 ### Running the MAUI Hybrid Application
 
+**Note**: Building MAUI applications requires platform-specific SDKs. On Linux, only Android can be built. Windows, iOS, and macOS targets require their respective operating systems.
+
 1. Navigate to the Hybrid project:
    ```bash
    cd FlatWorld.Hybrid
@@ -83,14 +85,20 @@ FlatWorldNew/
 
 2. Run on your target platform:
    ```bash
-   # For Android
+   # For Android (requires Android SDK)
    dotnet build -t:Run -f net10.0-android
    
-   # For iOS (macOS only)
+   # For iOS (macOS only, requires Xcode)
    dotnet build -t:Run -f net10.0-ios
    
-   # For Windows
+   # For Windows (Windows only)
    dotnet build -t:Run -f net10.0-windows10.0.19041.0
+   ```
+
+3. If you encounter workload errors, install the required MAUI workloads:
+   ```bash
+   # Install MAUI workloads (requires appropriate OS)
+   dotnet workload install maui
    ```
 
 ## 📦 Asset Referencing
