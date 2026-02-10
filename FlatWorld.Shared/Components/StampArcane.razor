@@ -1,0 +1,64 @@
+@* Arcane Stamp SVG Component *@
+<svg class="stamp" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="stamp-glow-arcane">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <radialGradient id="arcaneGradient">
+            <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:0.8" />
+            <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:0.9" />
+            <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+        </radialGradient>
+    </defs>
+    
+    <!-- Magical circle base -->
+    <circle cx="100" cy="100" r="85" fill="none" stroke="url(#arcaneGradient)" stroke-width="4" opacity="0.8" filter="url(#stamp-glow-arcane)" />
+    <circle cx="100" cy="100" r="80" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.6" />
+    <circle cx="100" cy="100" r="75" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.4" stroke-dasharray="5,3" />
+    
+    <!-- Pentagram for arcane magic -->
+    <g transform="translate(100, 100)">
+        <path d="M 0,-50 L 15,20 L -48,-15 L 48,-15 L -15,20 Z" 
+              fill="none" stroke="#8b5cf6" stroke-width="3" opacity="0.8" 
+              filter="url(#stamp-glow-arcane)" />
+        
+        <!-- Inner circle -->
+        <circle r="20" fill="#8b5cf6" opacity="0.2" />
+        <circle r="20" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0.8" />
+        
+        <!-- Center rune/symbol -->
+        <text y="8" font-family="PT Serif, serif" font-size="28" font-weight="700" 
+              fill="#a78bfa" text-anchor="middle" opacity="0.9" filter="url(#stamp-glow-arcane)">
+            ⚡
+        </text>
+    </g>
+    
+    <!-- Arcane symbols around the edge -->
+    <g fill="#8b5cf6" opacity="0.7" font-family="PT Serif, serif" font-size="20" font-weight="700">
+        <text x="100" y="25" text-anchor="middle">✦</text>
+        <text x="165" y="75" text-anchor="middle" transform="rotate(72, 165, 75)">✦</text>
+        <text x="145" y="155" text-anchor="middle" transform="rotate(144, 145, 155)">✦</text>
+        <text x="55" y="155" text-anchor="middle" transform="rotate(216, 55, 155)">✦</text>
+        <text x="35" y="75" text-anchor="middle" transform="rotate(288, 35, 75)">✦</text>
+    </g>
+    
+    <!-- Text along the top arc -->
+    <path id="arcaneTopArc" d="M 25,100 A 75,75 0 0,1 175,100" fill="none" />
+    <text font-family="PT Serif, serif" font-size="18" font-weight="700" fill="#a78bfa" opacity="0.9" filter="url(#stamp-glow-arcane)">
+        <textPath href="#arcaneTopArc" startOffset="50%" text-anchor="middle">
+            МАГИЯ
+        </textPath>
+    </text>
+    
+    <!-- Text along the bottom arc -->
+    <path id="arcaneBottomArc" d="M 175,100 A 75,75 0 0,1 25,100" fill="none" />
+    <text font-family="PT Serif, serif" font-size="14" font-weight="700" fill="#8b5cf6" opacity="0.8">
+        <textPath href="#arcaneBottomArc" startOffset="50%" text-anchor="middle">
+            ПЛОСКИЙ МИР
+        </textPath>
+    </text>
+</svg>

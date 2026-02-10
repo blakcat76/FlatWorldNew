@@ -1,0 +1,180 @@
+@* FlatWorld UI Demo Page *@
+
+<div class="container">
+    <div class="page-header">
+        <h1>Плоский мир / FlatWorld</h1>
+        <p class="page-subtitle">Steampunk + Magic UI Components</p>
+    </div>
+
+    <!-- Buttons Section -->
+    <div class="demo-section">
+        <h2>Кнопки / Buttons</h2>
+        
+        <div class="demo-row">
+            <div class="demo-item">
+                <span class="demo-label">Primary</span>
+                <button class="btn btn-primary">Основная кнопка</button>
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Secondary</span>
+                <button class="btn btn-secondary">Второстепенная</button>
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Arcane</span>
+                <button class="btn btn-arcane">Магическая</button>
+            </div>
+        </div>
+        
+        <div class="demo-row">
+            <div class="demo-item">
+                <span class="demo-label">Disabled</span>
+                <button class="btn btn-primary" disabled>Отключена</button>
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Loading</span>
+                <button class="btn btn-primary btn-loading">Загрузка...</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabs Section -->
+    <div class="demo-section">
+        <h2>Вкладки / Tabs</h2>
+        
+        <div class="tabs">
+            <button class="tab active">Обзор</button>
+            <button class="tab">Инвентарь</button>
+            <button class="tab">Карта</button>
+            <button class="tab">Настройки</button>
+        </div>
+        
+        <p>Активная вкладка: <span class="mono-bold">Обзор</span></p>
+    </div>
+
+    <!-- Badges Section -->
+    <div class="demo-section">
+        <h2>Значки / Badges</h2>
+        
+        <div class="demo-row">
+            <div class="demo-item">
+                <span class="demo-label">Primary</span>
+                <span class="badge badge-primary">Латунь</span>
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Secondary</span>
+                <span class="badge badge-secondary">Сталь</span>
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Success</span>
+                <span class="badge badge-success">Успех</span>
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Warning</span>
+                <span class="badge badge-warning">Внимание</span>
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Danger</span>
+                <span class="badge badge-danger">Опасность</span>
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Arcane</span>
+                <span class="badge badge-arcane">Магия</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stamps Section -->
+    <div class="demo-section">
+        <h2>Печати / Stamps</h2>
+        
+        <div class="demo-row">
+            <div class="demo-item">
+                <span class="demo-label">Approved</span>
+                <StampApproved />
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Sealed</span>
+                <StampSealed />
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Arcane</span>
+                <StampArcane />
+            </div>
+        </div>
+    </div>
+
+    <!-- Tooltips Section -->
+    <div class="demo-section">
+        <h2>Подсказки / Tooltips</h2>
+        
+        <div class="demo-row">
+            <div class="demo-item">
+                <span class="demo-label">Hover tooltip</span>
+                <button class="btn btn-primary" data-tooltip="Наведите на меня курсор">
+                    Наведите курсор
+                </button>
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Click toggle tooltip</span>
+                <button class="btn btn-secondary" data-tooltip="Нажмите, чтобы переключить. ESC для закрытия." data-tip-toggle="true">
+                    Нажмите меня
+                </button>
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Focus tooltip</span>
+                <button class="btn btn-arcane" data-tooltip="Используйте Tab для фокусировки">
+                    Фокусируемая кнопка
+                </button>
+            </div>
+        </div>
+        
+        <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-steel);">
+            <strong>Accessibility:</strong> Tooltips respond to hover, focus (Tab key), and click toggle. 
+            Press ESC to close active tooltips. Screen readers will announce tooltip content.
+        </p>
+    </div>
+
+    <!-- Typography Section -->
+    <div class="demo-section">
+        <h2>Типографика / Typography</h2>
+        
+        <div class="demo-row" style="flex-direction: column;">
+            <div class="demo-item">
+                <span class="demo-label">Title Font (PT Serif 700)</span>
+                <h3 style="margin: 0;">Заголовок в стиле стимпанк</h3>
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Body Font (PT Sans 400)</span>
+                <p style="margin: 0;">Основной текст для описаний и контента игры.</p>
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Body Font Bold (PT Sans 700)</span>
+                <p style="margin: 0; font-weight: 700;">Жирный текст для акцентов и важной информации.</p>
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Mono Numbers (IBM Plex Mono 500)</span>
+                <p class="mono" style="margin: 0;">123456789 • Статистика: HP 100/100</p>
+            </div>
+            
+            <div class="demo-item">
+                <span class="demo-label">Mono Numbers Bold (IBM Plex Mono 600)</span>
+                <p class="mono-bold" style="margin: 0;">987654321 • Урон: 45 DMG</p>
+            </div>
+        </div>
+    </div>
+</div>

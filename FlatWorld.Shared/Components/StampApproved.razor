@@ -1,0 +1,39 @@
+@* Approved Stamp SVG Component *@
+<svg class="stamp" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="stamp-texture-approved">
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" />
+            <feColorMatrix type="saturate" values="0" />
+            <feBlend mode="multiply" in="SourceGraphic" />
+        </filter>
+    </defs>
+    
+    <!-- Outer circle -->
+    <circle cx="100" cy="100" r="85" fill="none" stroke="#10b981" stroke-width="4" opacity="0.7" />
+    <circle cx="100" cy="100" r="80" fill="none" stroke="#10b981" stroke-width="2" opacity="0.5" />
+    
+    <!-- Text along the top arc -->
+    <path id="topArc" d="M 30,100 A 70,70 0 0,1 170,100" fill="none" />
+    <text font-family="PT Serif, serif" font-size="18" font-weight="700" fill="#10b981" opacity="0.8">
+        <textPath href="#topArc" startOffset="50%" text-anchor="middle">
+            ОДОБРЕНО
+        </textPath>
+    </text>
+    
+    <!-- Center text -->
+    <text x="100" y="105" font-family="PT Serif, serif" font-size="32" font-weight="700" 
+          fill="#10b981" text-anchor="middle" opacity="0.8">
+        ✓
+    </text>
+    
+    <!-- Text along the bottom arc -->
+    <path id="bottomArc" d="M 170,100 A 70,70 0 0,1 30,100" fill="none" />
+    <text font-family="PT Serif, serif" font-size="14" font-weight="700" fill="#10b981" opacity="0.6">
+        <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">
+            ПЛОСКИЙ МИР
+        </textPath>
+    </text>
+    
+    <!-- Texture overlay -->
+    <circle cx="100" cy="100" r="85" fill="#10b981" opacity="0.1" filter="url(#stamp-texture-approved)" />
+</svg>
