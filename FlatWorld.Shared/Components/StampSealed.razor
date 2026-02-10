@@ -1,0 +1,55 @@
+@* Sealed Stamp SVG Component *@
+<svg class="stamp" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="stamp-texture-sealed">
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" />
+            <feColorMatrix type="saturate" values="0" />
+            <feBlend mode="multiply" in="SourceGraphic" />
+        </filter>
+        <radialGradient id="sealGradient">
+            <stop offset="0%" style="stop-color:#cd7f32;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#b87333;stop-opacity:0.9" />
+        </radialGradient>
+    </defs>
+    
+    <!-- Wax seal base -->
+    <circle cx="100" cy="100" r="85" fill="url(#sealGradient)" opacity="0.9" />
+    
+    <!-- Seal impressions - decorative border -->
+    <circle cx="100" cy="100" r="75" fill="none" stroke="#8b5a2b" stroke-width="3" opacity="0.7" />
+    <circle cx="100" cy="100" r="70" fill="none" stroke="#8b5a2b" stroke-width="2" opacity="0.5" />
+    
+    <!-- Center emblem - gear design for steampunk -->
+    <g transform="translate(100, 100)">
+        <!-- Gear teeth -->
+        <path d="M 0,-50 L 8,-58 L 8,-42 Z" fill="#8b5a2b" opacity="0.8" />
+        <path d="M 35,-35 L 42,-42 L 28,-28 Z" fill="#8b5a2b" opacity="0.8" transform="rotate(45)" />
+        <path d="M 50,0 L 58,0 L 50,8 Z" fill="#8b5a2b" opacity="0.8" />
+        <path d="M 35,35 L 42,42 L 28,28 Z" fill="#8b5a2b" opacity="0.8" transform="rotate(135)" />
+        <path d="M 0,50 L 0,58 L -8,50 Z" fill="#8b5a2b" opacity="0.8" />
+        <path d="M -35,35 L -42,42 L -28,28 Z" fill="#8b5a2b" opacity="0.8" transform="rotate(225)" />
+        <path d="M -50,0 L -58,0 L -50,-8 Z" fill="#8b5a2b" opacity="0.8" />
+        <path d="M -35,-35 L -42,-42 L -28,-28 Z" fill="#8b5a2b" opacity="0.8" transform="rotate(315)" />
+        
+        <!-- Inner circle -->
+        <circle r="40" fill="none" stroke="#8b5a2b" stroke-width="4" opacity="0.7" />
+        <circle r="35" fill="#cd7f32" opacity="0.3" />
+        
+        <!-- Text -->
+        <text y="8" font-family="PT Serif, serif" font-size="24" font-weight="700" 
+              fill="#8b5a2b" text-anchor="middle" opacity="0.9">
+            ✱
+        </text>
+    </g>
+    
+    <!-- Text around seal -->
+    <path id="sealTopArc" d="M 30,100 A 70,70 0 0,1 170,100" fill="none" />
+    <text font-family="PT Serif, serif" font-size="16" font-weight="700" fill="#8b5a2b" opacity="0.8">
+        <textPath href="#sealTopArc" startOffset="50%" text-anchor="middle">
+            ЗАПЕЧАТАНО
+        </textPath>
+    </text>
+    
+    <!-- Texture overlay -->
+    <circle cx="100" cy="100" r="85" fill="#8b5a2b" opacity="0.15" filter="url(#stamp-texture-sealed)" />
+</svg>
