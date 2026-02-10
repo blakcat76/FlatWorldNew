@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../buildMultiTargeting/FlatWorld.Shared.props" />
-</Project>
