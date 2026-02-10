@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="FlatWorld.Hybrid/FlatWorld.Hybrid.csproj" />
+  <Project Path="FlatWorld.Shared/FlatWorld.Shared.csproj" />
+  <Project Path="FlatWorld.Web/FlatWorld.Web.csproj" />
+</Solution>

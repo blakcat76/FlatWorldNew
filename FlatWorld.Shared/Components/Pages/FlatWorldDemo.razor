@@ -1,0 +1,160 @@
+@page "/flatworld"
+@page "/"
+
+<PageTitle>FlatWorld - Steampunk UI Demo</PageTitle>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+    <h1 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">
+        Плоский мир / FlatWorld
+    </h1>
+    <p style="text-align: center; margin-bottom: 3rem; font-size: 1.125rem;">
+        Steampunk + Magic UI Components Demo
+    </p>
+
+    <!-- Buttons Section -->
+    <div class="demo-section">
+        <h2>Buttons</h2>
+        <div class="demo-items">
+            <button class="btn">Primary Button</button>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-danger">Danger</button>
+            <button class="btn btn-arcane">Arcane Magic</button>
+            <button class="btn" disabled>Disabled</button>
+            <button class="btn btn-loading">Loading...</button>
+        </div>
+    </div>
+
+    <!-- Tabs Section -->
+    <div class="demo-section">
+        <h2>Tabs</h2>
+        <div class="tabs">
+            <div class="tab tab-active">Inventory</div>
+            <div class="tab">Skills</div>
+            <div class="tab">Map</div>
+            <div class="tab">Quests</div>
+        </div>
+        <p>Active tab content would appear here.</p>
+    </div>
+
+    <!-- Badges Section -->
+    <div class="demo-section">
+        <h2>Badges</h2>
+        <div class="demo-items">
+            <span class="badge">Level <span class="mono">42</span></span>
+            <span class="badge badge-secondary">Common</span>
+            <span class="badge badge-success">Rare</span>
+            <span class="badge badge-warning">Epic</span>
+            <span class="badge badge-danger">Legendary</span>
+            <span class="badge badge-info">Quest</span>
+            <span class="badge badge-arcane">Arcane</span>
+        </div>
+    </div>
+
+    <!-- Stamps Section -->
+    <div class="demo-section">
+        <h2>Stamps</h2>
+        <div class="demo-grid">
+            <div style="text-align: center;">
+                <div class="stamp">
+                    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Approved Stamp -->
+                        <circle cx="60" cy="60" r="55" fill="none" stroke="#5a7a3a" stroke-width="3" opacity="0.8"/>
+                        <circle cx="60" cy="60" r="50" fill="none" stroke="#5a7a3a" stroke-width="2" opacity="0.6"/>
+                        <text x="60" y="50" text-anchor="middle" font-family="PT Serif, serif" font-size="18" font-weight="700" fill="#5a7a3a" opacity="0.9">APPROVED</text>
+                        <text x="60" y="75" text-anchor="middle" font-family="PT Sans, sans-serif" font-size="12" fill="#5a7a3a" opacity="0.8">✓ Certified</text>
+                        <line x1="20" y1="60" x2="100" y2="60" stroke="#5a7a3a" stroke-width="1" opacity="0.4"/>
+                    </svg>
+                </div>
+                <p style="margin-top: 0.5rem; font-weight: 700;">Approved</p>
+            </div>
+
+            <div style="text-align: center;">
+                <div class="stamp">
+                    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Sealed Stamp -->
+                        <circle cx="60" cy="60" r="55" fill="none" stroke="#b8860b" stroke-width="3" opacity="0.8"/>
+                        <polygon points="60,15 70,45 100,45 75,65 85,95 60,75 35,95 45,65 20,45 50,45" fill="none" stroke="#b8860b" stroke-width="2" opacity="0.7"/>
+                        <circle cx="60" cy="60" r="20" fill="none" stroke="#b8860b" stroke-width="2" opacity="0.6"/>
+                        <text x="60" y="64" text-anchor="middle" font-family="PT Serif, serif" font-size="14" font-weight="700" fill="#b8860b" opacity="0.9">SEALED</text>
+                    </svg>
+                </div>
+                <p style="margin-top: 0.5rem; font-weight: 700;">Sealed</p>
+            </div>
+
+            <div style="text-align: center;">
+                <div class="stamp">
+                    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Arcane Stamp -->
+                        <circle cx="60" cy="60" r="55" fill="none" stroke="#663399" stroke-width="3" opacity="0.8">
+                            <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <path d="M 60,20 L 70,50 L 100,50 L 75,70 L 85,100 L 60,80 L 35,100 L 45,70 L 20,50 L 50,50 Z" fill="none" stroke="#663399" stroke-width="2" opacity="0.7">
+                            <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2s" repeatCount="indefinite"/>
+                        </path>
+                        <circle cx="60" cy="60" r="15" fill="none" stroke="#663399" stroke-width="2" opacity="0.8"/>
+                        <text x="60" y="64" text-anchor="middle" font-family="PT Serif, serif" font-size="12" font-weight="700" fill="#663399" opacity="0.9">ARCANE</text>
+                    </svg>
+                </div>
+                <p style="margin-top: 0.5rem; font-weight: 700;">Arcane</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tooltips Section -->
+    <div class="demo-section">
+        <h2>Tooltips</h2>
+        <div class="demo-items">
+            <div class="tooltip-wrapper">
+                <button class="btn">Hover Me</button>
+                <span class="tooltip">This tooltip appears on hover</span>
+            </div>
+
+            <div class="tooltip-wrapper" data-tip-toggle="true">
+                <button class="btn btn-secondary">Click to Toggle</button>
+                <span class="tooltip">Click to toggle, ESC to close</span>
+            </div>
+
+            <div class="tooltip-wrapper">
+                <span class="badge badge-arcane" tabindex="0">Focus Me</span>
+                <span class="tooltip">Keyboard accessible (Tab + Shift+Tab)</span>
+            </div>
+
+            <div class="tooltip-wrapper" data-tip-toggle="true">
+                <span class="badge badge-warning">Interactive</span>
+                <span class="tooltip">All accessibility features enabled</span>
+            </div>
+        </div>
+        <p style="margin-top: 1.5rem; font-size: 0.875rem; color: #666;">
+            <strong>Features:</strong> Hover/Focus to show • Click toggle (data-tip-toggle) • ESC to close • Full keyboard navigation
+        </p>
+    </div>
+
+    <!-- Typography Showcase -->
+    <div class="demo-section">
+        <h2>Typography</h2>
+        <div style="display: grid; gap: 1rem;">
+            <div>
+                <p style="font-family: var(--font-title); font-size: 1.5rem; font-weight: 700;">
+                    PT Serif 700 - Заголовки / Titles
+                </p>
+            </div>
+            <div>
+                <p style="font-family: var(--font-body); font-weight: 400;">
+                    PT Sans 400 - Обычный текст / Body text
+                </p>
+                <p style="font-family: var(--font-body); font-weight: 700;">
+                    PT Sans 700 - Жирный текст / Bold text
+                </p>
+            </div>
+            <div>
+                <p style="font-family: var(--font-mono); font-weight: 500;">
+                    IBM Plex Mono 500 - Numbers: 0123456789
+                </p>
+                <p style="font-family: var(--font-mono); font-weight: 600;">
+                    IBM Plex Mono 600 - Bold Numbers: 0123456789
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
